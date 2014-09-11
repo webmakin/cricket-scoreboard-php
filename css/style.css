@@ -1,0 +1,32 @@
+#widget{
+	text-align: center;
+}
+.half-slim-hr {
+    margin: 5px 5px 5px 25%;
+    width: 50%;
+}
+.teambox{
+	text-align: center;
+}
+.card-completed-info {
+    /*background-color: #4C70AF;*/
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.125) inset;
+    color: #FFF;
+    padding: 1px;
+}
+.card-completed-info h4{
+	color: #fff;
+}
+.details{
+	background-color: #C9F1F2;
+	text-align: left;
+}
+.over{
+	list-style-type: none;
+}
+.over span{
+	margin: 0 3px;
+}
+header{
+	margin-bottom: 60px;
+}

@@ -1,0 +1,21 @@
+<IfModule mod_rewrite.c>
+  
+    ### Canonicalize codeigniter URLs
+    DirectoryIndex index.php index.html
+    RewriteEngine on
+
+    RewriteRule modules/(.+)/controllers/(.+)\.php$ /index.php?/$1/$2 [L,R=301]
+    RewriteRule controllers/(.+)\.php$ /index.php?/$1 [L,R=301]
+    
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php?/$1 [L]
+ 
+</IfModule>
+ 
+<IfModule !mod_rewrite.c>
+ 
+    # Without mod_rewrite, route 404's to the front controller
+    ErrorDocument 404 /index.php
+ 
+</IfModule>
